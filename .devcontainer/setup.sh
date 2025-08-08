@@ -7,8 +7,8 @@ curl -fsSL https://raw.githubusercontent.com/speakeasy-api/speakeasy/main/instal
 rmdir samples || true
 mkdir samples
 
-
-uv sync --dev
+python -m pip install --upgrade pip
+pip install -e .
 
 # Generate starter usage sample with speakeasy
 speakeasy generate usage -s .speakeasy/out.openapi.yaml -l python -o samples/root.py
